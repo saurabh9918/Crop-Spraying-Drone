@@ -1,19 +1,26 @@
 %% Code for Field Initial Parameters calculation 
 
-%% Inital Parameters
-area = 11000; %area of the field in squared meter
-s = 7; %Spraying length in meter
-lamda = 7 ; %integer value to define the breadth of field
-b = lamda*s; %breadth of field
-l = 11000/b; %length of field
+%% Parameters Initilization
 
-%% Curve calculation
+lamda = 20; %Natural number denoting the total breadth of field
+mu = 12; %Natural number denoting the breadth covered in single charge
 
-r = s/2; %radius of maximum size of circle traced (assumptions)
-d = pi*r; %total distance traced by curve
-t = lamda*d; %total distance traced by curve
+%mu should be less than lamda 
 
-%% Distance traced in total
+%% Parameters calculation
 
-total = lamda*l+t; %total distance traveled by drone to cover the field
+d = (11000/7)+lamda*pi*7;  %total distance travelled covering the full field
+t = (3600*(11000+49*lamda*pi)/100000)*mu;  %total time taken to cover the full field
+d1 = 100000/(7*mu);  %Distance covered in 1 Hour lengthwise
+vmax = 4/mu;  %maximum required velocity 
+
+%% Restricted values for the above codes:
+
+%Average area of field in India = 11000 m2 (1.1 Hectares)
+%Spraying length = 7 meters 
+%Area covered per Hour = 100000 m2 (10 Hectares)
+%Field is in the form of rectangle Profile from top
+
+
+
 
