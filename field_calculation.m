@@ -21,6 +21,15 @@ vmax = 4/mu;  %maximum required velocity
 %Area covered per Hour = 100000 m2 (10 Hectares)
 %Field is in the form of rectangle Profile from top
 
+%% Finalized value
+
+% lamda = 10 
+% Length of field = 157.14 m
+% Breadth of field = 70 m 
+% Time to spray the field = 6.6 minutes 
+% Total distance transvered spraying the given field = 1791.4 m 
+% Maximum velocity = 7 m/s 
+
 
 
 
